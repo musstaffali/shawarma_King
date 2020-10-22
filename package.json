@@ -1,0 +1,13 @@
+{
+  "name": "Shawarma-master",
+  "version": "1.0.0",
+  "description": "Video of the process on how to make this application. https://www.youtube.com/playlist?list=PLkOpMJMP5av1IzrpAlGw2KroVlx8dkgMC",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

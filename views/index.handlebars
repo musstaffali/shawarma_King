@@ -1,0 +1,72 @@
+<div class="container">
+
+    <div class="jumbotron">
+        <h2>Select a Shawarma </h2>
+        <panel>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="newshawarma">Order Fresh Shawarma</label>
+                    {{!-- <input type="text" id="newShawarma" name="shawarma"> --}}
+                    <select data-placeholder="" id="newshawarma" name="shawarma">
+                        <option value="Nothing Selected" selected>Please Select a Shawarma</option>
+                        <option value="Chicken Shawarma">ChickenShawarma</option>
+                        <option value="Steak Shawarma">SteakShawarma</option>
+                        <option value="Double Meat and Veggie">Double Up (double meat and veggie)</option>
+                        <option value="Veggie Shawarma">Veggie Shawarma</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-success" id="addshawarma">
+                        <span class="fa fa-arrow-down"></span> order
+                    </button>
+                </div>
+            </form>
+        </panel>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="leftside"><strong>Order Your Shawarma</strong>
+                    <p>Send order to cashier when ready for pick up</p>
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        {{#each shawarmas}}
+                        {{#unless ordered}}
+
+                        <span><strong> {{this.id}} - {{this.shawarma_name}}</strong></span>
+                        <button type="button" class="ordershawarma btn btn-warning" id="ordershawarma" data-id="{{this.id}}"
+                            data-newOrdered="{{order}}"><span class="fa fa-usd">order is in progress</span></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rightside"><strong>Shawarma is Ready for Pick Up</strong>
+                    <p>Remove order from pick up when delivered</p>
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        {{#each shawarmas}}
+                        {{#if ordered}}
+                        <span><strong> {{this.id}} - {{this.shawarma_name}}</strong></span>
+                        <button type="button" class="trashshawarma btn btn-danger" id="trashshawarma" data-id="{{this.id}}"
+                            data-newOrdered="{{order}}"><span class="fa fa-trash"></span>order is ready</button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--endrow -->
+</div>
+<!--endcontainer -->

@@ -1,0 +1,36 @@
+body {
+  background-image: url("../img/Shawarma.jpg");
+}
+
+.jumbotron {
+  background-image: url("../img/Shawarma3.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgb(7, 4, 4);
+  color: rgb(255, 65, 65);
+  margin-top: 3%;
+}
+#newshawarma {
+  color: white;
+  background-color: rgb(255, 65, 65);
+}
+#leftside {
+  background-color: rgb(255, 65, 65);
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+#rightside {
+  background-color: rgb(7, 4, 4);
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#thisshawarma_name {
+  background-color: rgb(255, 65, 65);
+}
+
+#addshawarma {
+  background-color: rgb(255, 65, 65);
+}
