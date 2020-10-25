@@ -1,16 +1,16 @@
 {
     "development": {
-      "username": "root",
-      "password": "mustafa",
-      "database": "shawarmas_db",
-      "host": "127.0.0.1",
+      "username": "furvants6y9fz4gq",
+      "password": "k28gpocnyne6pg3i",
+      "database": "rr3ixukoh5purhg7",
+      "host": "rnr56s6e2uk326pj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql"
     },
     "test": {
-      "username": "root",
-      "password": "mustafa",
-      "database": "shawarmas_db",
-      "host": "127.0.0.1",
+      "username": "furvants6y9fz4gq",
+      "password": "k28gpocnyne6pg3i",
+      "database": "rr3ixukoh5purhg7",
+      "host": "rnr56s6e2uk326pj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql"
     },
     "production": {
