@@ -45,7 +45,7 @@ var orm = {
       ") ";
 
     console.log(dbQuery);
-    connection.query(dbQuery, vals, function(err, res) {
+    connection.query(dbQuery, vals, condition, function(err, res) {
       if (err) {
         throw err;
       }
@@ -53,14 +53,12 @@ var orm = {
     });
   },
   updateOne: function(table, objColVals, condition, cb) {
-    var dbQuery =
-      "UPDATE " +
-      table +
-      " SET " +
-      translateSql(objColVals) +
-      " WHERE " +
-      condition;
-
+    var dbQuery = "UPDATE " + table ;
+  
+      dbQuery += " SET " ;
+      dbQuery += objToSql(objColVals);
+      dbQuery += " WHERE ";
+      dbQuery += condition;
     console.log(dbQuery);
 
     connection.query(dbQuery, function(err, res) {

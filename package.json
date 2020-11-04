@@ -1,7 +1,6 @@
 {
   "name": "Shawarma-master",
   "version": "1.0.0",
-  "description": "Video of the process on how to make this application. https://www.youtube.com/playlist?list=PLkOpMJMP5av1IzrpAlGw2KroVlx8dkgMC",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

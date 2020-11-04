@@ -27,14 +27,15 @@ $(function() {
     event.preventDefault();
 
     var id = $(this).data("id");
-    var orderedState = {
-      ordered: 1
+    var newOrdered = $(this).data("newOrdered")
+    var newOrderedState = {
+      ordered: newOrdered
     };
 
     // Send the PUT request.
     $.ajax("/api/shawarmas/" + id, {
       type: "PUT",
-      data: orderedState
+      data: newOrderedState
     }).then(function() {
       console.log("Shawarma ordered");
       location.reload();
