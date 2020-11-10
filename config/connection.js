@@ -6,7 +6,7 @@ if (process.env.JAWSDB_URL) {
     host: "tyduzbv3ggpf15sx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     user: "e7ucem3qwn918utb",
     password: "qprl8665c5rfsu2d",
-    database: "shawarmasJawsDB"
+    database: "rhfpsgbfz5wogb0j"
   });
 }
 connection.connect();
