@@ -45,7 +45,7 @@ var orm = {
       ") ";
 
     console.log(dbQuery);
-    connection.query(dbQuery, vals, condition, function(err, res) {
+    connection.query(dbQuery, vals, function(err, res) {
       if (err) {
         throw err;
       }
