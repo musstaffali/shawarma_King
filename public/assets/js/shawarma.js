@@ -23,7 +23,7 @@ $(function() {
   });
 
   // UPDATE
-  $(".orderedshawarma").on("click", function(event) {
+  $(".ordershawarma").on("click", function(event) {
     event.preventDefault();
 
     var id = $(this).data("id");

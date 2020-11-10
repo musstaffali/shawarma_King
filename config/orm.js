@@ -53,12 +53,14 @@ var orm = {
     });
   },
   updateOne: function(table, objColVals, condition, cb) {
-    var dbQuery = "UPDATE " + table ;
-  
-      dbQuery += " SET " ;
-      dbQuery += objToSql(objColVals);
-      dbQuery += " WHERE ";
-      dbQuery += condition;
+    var dbQuery =
+      "UPDATE " +
+      table +
+      " SET " +
+      translateSql(objColVals) +
+      " WHERE " +
+      condition;
+
     console.log(dbQuery);
 
     connection.query(dbQuery, function(err, res) {
@@ -68,7 +70,7 @@ var orm = {
       cb(res);
     });
   },
-  deleteOne: function(table, condition, cb) {
+  deleteOne: function(table, cb) {
     var dbQuery = "DELETE FROM " + table + " WHERE " + condition;
     console.log(dbQuery);
 
